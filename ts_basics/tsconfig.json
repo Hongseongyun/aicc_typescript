@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2016", // 컴파일된 자바스크립트의 문법을 ES5 버전으로 설정
+    "module": "commonjs", // 모듈 시스템을 CommonJS 형태로 사용 (Node.js에서 흔히 사용)
+    "moduleResolution": "node", // 모듈 해석 방법을 Node.js 스타일로 설정 (node_modules에서 찾음)
+    "outDir": "./dist", // 컴파일된 자바스크립트 파일이 생성될 디렉토리 지정
+    "esModuleInterop": true, // CommonJS와 ES모듈 간의 호환성을 높임 (import 방식 개선)
+    "forceConsistentCasingInFileNames": true, // 파일 이름의 대소문자 일관성을 강제
+    "strict": true, // 타입 검사를 매우 엄격하게 함 (엄격한 타입체크 활성화)
+    "skipLibCheck": true // 라이브러리(.d.ts) 파일의 타입 검사 생략 (성능 향상)
+  },
+  "include": ["src/**/*"] // 컴파일 대상이 되는 파일들을 지정 (src 폴더 내부 모든 파일)
+}
