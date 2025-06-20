@@ -1,0 +1,46 @@
+1. npm init -y
+2. npm i -D ts-node typescript @types/node
+3. npx tsc --init
+
+
+4. edit tsconfig.json
+- "module": "nodenext"
+- "moduleResolution": "nodenext"
+- "resolveJsonModule": true
+- "outdir": "./dist"
+- "esModuleInterop": true,
+- "forceConsistentCasingInFileNames": true
+- "strict": true
+- "skipLibCheck": true
+- {}, "include": ["src/**/*", "src/data/**/*.json", "prisma/**/*"]
+
+
+5. npm i prisma @prisma/client
+6. npx prisma init
+7. create seedData directory and move files 
+8. create seed.ts and edit
+9. install prisma extension
+10. edit schema.prisma
+11. edit package.json scripts values
+12. npx prisma generate
+13. npx prisma migrate dev --name init
+14. check pgadmin creating tables
+15. npm run seed
+16. check pgadmin "select * from ..."
+17. npm i express body-parser cors dotenv helmet morgan
+18. npm i -D rimraf concurrently nodemon @types/cors @types/express @types/morgan @types/node
+19. create src/index.ts file
+20. add codes on package.json -> build, start, dev
+21. npm run dev
+22. create controllers/projectController.ts -> getProjects
+23. create routes/projectRoutes.ts -> getProjects router
+24. create /projects endpoint on src/index.ts
+25. create controllers/projectController.ts -> createProject
+- excute `SELECT setval(pg_get_serial_sequence('"Project"', 'id'), coalesce(max(id)+1, 1), false) FROM "Project"; on pgadmin` 
+26. create taskController.ts
+27. create taskRoutes.ts
+28. create taskController.ts -> createTask
+- excute `SELECT setval(pg_get_serial_sequence('"Task"', 'id'), coalesce(max(id)+1, 1), false) FROM "Task"; on pgadmin` 
+29. 28. create taskController.ts -> createUpdateStatus
+
+
